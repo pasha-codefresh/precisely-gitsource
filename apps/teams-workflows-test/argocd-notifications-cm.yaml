@@ -19,8 +19,8 @@ data:
     - description: Application syncing has succeeded
       oncePer: app.status.operationState?.syncResult?.revision
       send:
-      - app-sync-succeeded  # Uses MessageCard format - FAILS with Workflows, works with Office 365 Connectors
-      # - app-sync-succeeded-workflows  # Uses Adaptive Cards format - WORKS with Workflows
+      # - app-sync-succeeded  # Uses MessageCard format - FAILS with Workflows, works with Office 365 Connectors
+      - app-sync-succeeded-workflows  # Uses Adaptive Cards format - WORKS with Workflows
       when: app.status.operationState != nil and app.status.operationState.phase in ['Succeeded']
 
   # Templates with teams support
