@@ -4,8 +4,8 @@ metadata:
   name: argocd-notifications-cm
   namespace: argocd
 data:
-  # Teams Workflows service configuration
-  service.teams-workflows: |
+  # Teams service configuration
+  service.teams: |
     recipientUrls:
       channelName: $channel-workflows-url
 
@@ -17,9 +17,9 @@ data:
       - app-sync-succeeded
       when: app.status.operationState != nil and app.status.operationState.phase in ['Succeeded']
 
-  # Templates with teams-workflows support
+  # Templates with teams support
   template.app-sync-succeeded: |
-    teams-workflows:
+    teams:
       facts: |
         [{
           "name": "Sync Status",
