@@ -7,7 +7,6 @@ metadata:
     # Teams Workflows notification subscriptions
     # The recipient 'channelName' must match a key in the recipientUrls map in argocd-notifications-cm
     notifications.argoproj.io/subscribe.on-sync-succeeded.teams: channelName
-    notifications.argoproj.io/subscribe.on-deployed.teams: channelName
 spec:
   project: default
   source:
