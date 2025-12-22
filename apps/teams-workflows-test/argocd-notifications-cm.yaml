@@ -8,7 +8,7 @@ data:
   # Note: Webhook type is automatically detected based on URL pattern
   # - Power Automate Workflows: api.powerautomate.com, api.powerplatform.com, flow.microsoft.com
   # - Office 365 Connectors: webhook.office.com (deprecated, retiring March 31, 2026)
-  service.teams: |
+  service.teams-workflows: |
     recipientUrls:
       channelName: $channel-workflows-url
 
