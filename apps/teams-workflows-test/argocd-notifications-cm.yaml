@@ -27,7 +27,7 @@ data:
   #
   # This template uses the default MessageCard format (for legacy Office 365 Connectors):
   template.app-sync-succeeded: |
-    teams:
+    teams-workflows:
       facts: |
         [{
           "name": "Sync Status",
@@ -49,7 +49,7 @@ data:
   # Teams Workflows and wraps it into the "message" + "attachments" envelope.
   # Here we just provide the high-level fields; the engine builds the JSON.
   template.app-sync-succeeded-workflows: |
-    teams:
+    teams-workflows:
       facts: |
         [{
           "name": "Sync Status",
